@@ -2,7 +2,8 @@ import axios from "axios";
 
 // Change this URL if backend is deployed somewhere (like Render, Vercel, Railway)
 const API = axios.create({
-  baseURL: "https://portfolio-backend-najr.onrender.com",
+  // baseURL: "http://localhost:5000",
+  baseURL: "https://portfolio-backend-najr.onrender.com/",
 });
 
 // Function to send message to backend

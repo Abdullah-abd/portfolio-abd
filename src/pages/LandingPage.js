@@ -4,6 +4,7 @@ import {
   FaCode,
   FaEnvelope,
   FaFileAlt,
+  FaGraduationCap,
   FaLayerGroup,
   FaUser,
 } from "react-icons/fa";
@@ -22,14 +23,18 @@ function LandingPage() {
       <FluidBackground className="fixed inset-0 z-10 bg-white" />
 
       {/* Header with CV */}
-      <header className="fixed top-6 right-6 z-30 ">
+      <header
+        className="fixed top-6 right-6 z-30 "
+        onClick={() => {
+          window.open("/resume_abd.pdf", "_blank");
+        }}
+      >
         <ExperienceCard
           icon={<FaFileAlt className="text-outline-grey text-2xl" />}
           title="CV"
           className="bg-white/30 backdrop-blur-md"
         />
       </header>
-
       {/* Main content */}
       <main className="relative z-20 flex flex-col items-center text-center mt-20 px-4 pointer-events-none">
         {/* Hero Section */}
@@ -54,31 +59,36 @@ function LandingPage() {
         </section>
 
         {/* Quick Navigation (Cards) */}
-        <section className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 mt-4">
+        <section className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 mt-4">
           <ExperienceCard
             icon={<FaUser className="text-blue-500 stroke-2" />}
             title="About Me"
             message={"Tell me about yourself"}
           />
           <ExperienceCard
+            icon={<FaGraduationCap className="text-blue-500 stroke-2" />}
+            title="Education"
+            message={"Tell me about your education"}
+          />
+          <ExperienceCard
             icon={<FaCode className="text-pink-500 stroke-2" />}
             title="Projects"
-            message={"projects"}
+            message={"Tell me about your projects"}
           />
           <ExperienceCard
             icon={<FaLayerGroup className="text-teal-500 stroke-2" />}
             title="Skills"
-            message={"skills"}
+            message={"Tell me about your skills"}
           />
           <ExperienceCard
             icon={<FaBriefcase className="text-purple-500 stroke-2" />}
             title="Experience"
-            message={"Experience"}
+            message={"Tell me about your experience"}
           />
           <ExperienceCard
             icon={<FaEnvelope className="text-indigo-500 stroke-2" />}
             title="Contact"
-            message={"Contact"}
+            message={"Let's connect"}
           />
         </section>
       </main>
